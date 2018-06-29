@@ -22,6 +22,7 @@ from rest_framework.authtoken import views
 
 router = routers.DefaultRouter()
 router.register(r'notes', NoteViewset)
+
 router.register(r'personal_notes', PersonalNoteViewset)
 
 
