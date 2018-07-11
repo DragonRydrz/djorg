@@ -10,7 +10,7 @@ __pycache__/
 .Python
 .env
 env/
-build/
+# build/
 develop-eggs/
 dist/
 downloads/
@@ -59,13 +59,13 @@ docs/_build/
 target/
 
 # dependencies
-node_modules
+frontend/node_modules
 
 # testing
 /coverage
 
 # production
-/build
+# /build
 
 # misc
 .DS_Store
