@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { CardColumns, Card, CardHeader, CardBody, CardText } from 'reactstrap';
 import axios from 'axios';
 
-const host = process.env.HOST || 'http://localhost:8000';
+const host = 'http://localhost:8000';
+const token = process.env.TOKEN || '4b7652a5e022f474a58faef595c337c5a2788eb1';
 
 export default class Notes extends Component {
   state = {
@@ -12,10 +13,11 @@ export default class Notes extends Component {
 
   componentDidMount() {
     console.log(host);
+    console.log(token);
     axios
       .get(`${host}/api/personal_notes/`, {
         headers: {
-          Authorization: 'Token 4b7652a5e022f474a58faef595c337c5a2788eb1',
+          Authorization: `Token ${token}`,
         },
       })
       .then(response => {
@@ -26,7 +28,7 @@ export default class Notes extends Component {
     axios
       .get(`${host}/api/notes/`, {
         headers: {
-          Authorization: 'Token 4b7652a5e022f474a58faef595c337c5a2788eb1',
+          Authorization: `Token ${token}`,
         },
       })
       .then(response => {
