@@ -10,7 +10,7 @@ export default class Notes extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://localhost:8000/api/personal_notes/`, {
+      .get(`https://agenung-djorg.herokuapp.com/api/personal_notes/`, {
         headers: {
           Authorization: 'Token 4b7652a5e022f474a58faef595c337c5a2788eb1',
         },
@@ -21,7 +21,7 @@ export default class Notes extends Component {
       .catch(err => console.log(err));
 
     axios
-      .get(`http://localhost:8000/api/notes/`, {
+      .get(`https://agenung-djorg.herokuapp.com/api/notes/`, {
         headers: {
           Authorization: 'Token 4b7652a5e022f474a58faef595c337c5a2788eb1',
         },
