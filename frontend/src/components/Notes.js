@@ -11,8 +11,9 @@ export default class Notes extends Component {
   };
 
   componentDidMount() {
+    console.log(host);
     axios
-      .get(`/api/personal_notes/`, {
+      .get(`${host}/api/personal_notes/`, {
         headers: {
           Authorization: 'Token 4b7652a5e022f474a58faef595c337c5a2788eb1',
         },
@@ -23,7 +24,7 @@ export default class Notes extends Component {
       .catch(err => console.log(err));
 
     axios
-      .get(`/api/notes/`, {
+      .get(`${host}/api/notes/`, {
         headers: {
           Authorization: 'Token 4b7652a5e022f474a58faef595c337c5a2788eb1',
         },
