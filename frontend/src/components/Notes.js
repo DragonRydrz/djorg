@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { CardColumns, Card, CardHeader, CardBody, CardText } from 'reactstrap';
 import axios from 'axios';
 
-const host = 'http://localhost:8000';
+const host = process.env.HOST || 'http://localhost:8000';
 const token = process.env.TOKEN || '4b7652a5e022f474a58faef595c337c5a2788eb1';
 
 export default class Notes extends Component {
