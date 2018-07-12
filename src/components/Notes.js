@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { CardColumns, Card, CardHeader, CardBody, CardText } from 'reactstrap';
 import axios from 'axios';
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 // require('dotenv').config();
 
 // let host = process.env.HOST || HOST;
