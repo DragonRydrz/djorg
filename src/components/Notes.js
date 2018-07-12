@@ -13,7 +13,7 @@ export default class Notes extends Component {
 
   componentDidMount() {
     // console.log(host);
-    console.log(token);
+    console.log(process.env);
     axios
       .get(`https://agenung-djorg.herokuapp.com/api/personal_notes/`, {
         headers: {
