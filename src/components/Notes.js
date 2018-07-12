@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { CardColumns, Card, CardHeader, CardBody, CardText } from 'reactstrap';
 import axios from 'axios';
 
-let host = process.env.HOST || 'http://localhost:8000';
-let token = process.env.TOKEN || '4b7652a5e022f474a58faef595c337c5a2788eb1';
+//let host = process.env.HOST || 'http://localhost:8000';
+//let token = process.env.TOKEN || '4b7652a5e022f474a58faef595c337c5a2788eb1';
 
 export default class Notes extends Component {
   state = {
@@ -15,7 +15,7 @@ export default class Notes extends Component {
     console.log(host);
     console.log(token);
     axios
-      .get(`${host}/api/personal_notes/`, {
+      .get(`https://agenung-djorg.herokuapp.com/api/personal_notes/`, {
         headers: {
           Authorization: `Token ${token}`,
         },
@@ -26,7 +26,7 @@ export default class Notes extends Component {
       .catch(err => console.log(err));
 
     axios
-      .get(`${host}/api/notes/`, {
+      .get(`https://agenung-djorg.herokuapp.com/api/notes/`, {
         headers: {
           Authorization: `Token ${token}`,
         },
