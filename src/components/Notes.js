@@ -6,7 +6,8 @@ import axios from 'axios';
 // require('dotenv').config();
 
 // let host = process.env.HOST || HOST;
-let token = process.env.TOKEN || '4b7652a5e022f474a58faef595c337c5a2788eb1';
+let token = process.env.TOKEN || '8e00bcd0fccc9f6ce82e891fe589c282cd53537c';
+// '4b7652a5e022f474a58faef595c337c5a2788eb1';
 
 export default class Notes extends Component {
   state = {
