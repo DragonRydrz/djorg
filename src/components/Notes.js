@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { CardColumns, Card, CardHeader, CardBody, CardText } from 'reactstrap';
 import axios from 'axios';
+// import dotenv from 'dotenv';
 
-//let host = process.env.HOST || 'http://localhost:8000';
+require('dotenv').config();
+
+// let host = process.env.HOST || HOST;
 let token = process.env.TOKEN || '4b7652a5e022f474a58faef595c337c5a2788eb1';
 
 export default class Notes extends Component {
@@ -12,8 +15,8 @@ export default class Notes extends Component {
   };
 
   componentDidMount() {
-    // console.log(host);
     console.log(process.env);
+    // console.log(testing);
     axios
       .get(`https://agenung-djorg.herokuapp.com/api/personal_notes/`, {
         headers: {
