@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { CardColumns, Card, CardHeader, CardBody, CardText } from 'reactstrap';
 import axios from 'axios';
-// import dotenv from 'dotenv';
-
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
+// require('dotenv').config();
 
 // let host = process.env.HOST || HOST;
 let token = process.env.TOKEN || '4b7652a5e022f474a58faef595c337c5a2788eb1';
