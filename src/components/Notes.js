@@ -3,7 +3,7 @@ import { CardColumns, Card, CardHeader, CardBody, CardText } from 'reactstrap';
 import axios from 'axios';
 
 //let host = process.env.HOST || 'http://localhost:8000';
-//let token = process.env.TOKEN || '4b7652a5e022f474a58faef595c337c5a2788eb1';
+let token = process.env.TOKEN || '4b7652a5e022f474a58faef595c337c5a2788eb1';
 
 export default class Notes extends Component {
   state = {
@@ -12,7 +12,7 @@ export default class Notes extends Component {
   };
 
   componentDidMount() {
-    console.log(host);
+    // console.log(host);
     console.log(token);
     axios
       .get(`https://agenung-djorg.herokuapp.com/api/personal_notes/`, {
